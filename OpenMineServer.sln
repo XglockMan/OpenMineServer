@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMineServer", "OpenMineServer\OpenMineServer.csproj", "{B3E54ACB-1868-4FF1-AA08-11A883FFCBAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMinePluginAPI", "OpenMinePluginAPI\OpenMinePluginAPI.csproj", "{AA0B567E-83DC-44CA-98A5-525669330ACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3E54ACB-1868-4FF1-AA08-11A883FFCBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E54ACB-1868-4FF1-AA08-11A883FFCBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E54ACB-1868-4FF1-AA08-11A883FFCBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E54ACB-1868-4FF1-AA08-11A883FFCBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0B567E-83DC-44CA-98A5-525669330ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0B567E-83DC-44CA-98A5-525669330ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0B567E-83DC-44CA-98A5-525669330ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0B567E-83DC-44CA-98A5-525669330ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
