@@ -6,7 +6,7 @@ using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 
-namespace OpenMineServer.network
+namespace OpenMineServer.Network
 {
     public class CompressionDecoder : ByteToMessageDecoder
     {

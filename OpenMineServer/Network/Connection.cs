@@ -3,7 +3,7 @@ using DotNetty.Buffers;
 using DotNetty.Codecs.Mqtt.Packets;
 using DotNetty.Transport.Channels;
 
-namespace OpenMineServer.network
+namespace OpenMineServer.Network
 {
     public class Connection : SimpleChannelInboundHandler<IByteBuffer>
     {

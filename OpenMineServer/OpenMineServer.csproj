@@ -10,8 +10,4 @@
       <PackageReference Include="DotNettyAll" Version="2.6.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="network\protocol\game" />
-    </ItemGroup>
-
 </Project>
