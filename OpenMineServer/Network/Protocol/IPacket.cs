@@ -1,10 +1,8 @@
-using DotNetty.Buffers;
-
 namespace OpenMineServer.Network.Protocol
 {
-    public interface IPacket<T> where T : IPacketListener
+    public interface IPacket
     {
-        void write(IByteBuffer buffer);
-        bool skippable();
+        int getID();
+
     }
 }
