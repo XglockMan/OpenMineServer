@@ -4,9 +4,13 @@ namespace OpenMineServer
 {
     class Program
     {
+        public Program()
+        {
+            
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new Program();
         }
     }
 }
