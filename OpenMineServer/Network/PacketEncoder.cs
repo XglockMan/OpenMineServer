@@ -7,10 +7,10 @@ namespace OpenMineServer.Network
 {
     public class PacketEncoder : MessageToByteEncoder<IPacket>
     {
-
-        protected override void Encode(IChannelHandlerContext context, IPacket message, IByteBuffer output)
+        protected override void Encode(IChannelHandlerContext context, IPacket rawPacket, IByteBuffer encodedPacket)
         {
-            message.ToBuffer(output);
+            Serialization serialization = new Serialization(encodedPacket);
+            rawPacket.ToBuffer(serialization);
         }
     }
 }

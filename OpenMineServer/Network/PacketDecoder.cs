@@ -8,7 +8,7 @@ using OpenMineServer.Network.Protocol.Game;
 
 namespace OpenMineServer.Network
 {
-    public class PacketDecoder : MessageToByteEncoder<IPacket>
+    public class PacketDecoder : ByteToMessageDecoder
     {
         private static Dictionary<byte, Type> _packets;
 
@@ -16,13 +16,25 @@ namespace OpenMineServer.Network
         {
             _packets = new Dictionary<byte, Type>
             {
-                { (int)1, typeof(PacketOutChat) }
+                { 1, typeof(PacketChat) },
+                { 2, typeof(PacketLogin) }
             };
         }
-        
-        protected override void Encode(IChannelHandlerContext context, IPacket message, IByteBuffer output)
+
+        protected override void Decode(IChannelHandlerContext context, IByteBuffer encodedPacket, List<object> decodedPacket)
         {
-            throw new System.NotImplementedException();
+            Serialization serialization = new Serialization(encodedPacket);
+            byte packetId = (byte) serialization.Read(DataType.Byte);
+            IPacket packet = (IPacket)Activator.CreateInstance(_packets[packetId]);
+            if (packet != null)
+            {
+                packet.Parse(serialization);
+                decodedPacket.Add(packet);
+            }
+            else
+            {
+                throw new Exception();
+            }
         }
     }
 }

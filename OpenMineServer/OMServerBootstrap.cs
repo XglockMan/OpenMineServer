@@ -8,6 +8,7 @@ namespace OpenMineServer
         {
             
         }
+        
         static void Main(string[] args)
         {
             new OMServerBootstrap();

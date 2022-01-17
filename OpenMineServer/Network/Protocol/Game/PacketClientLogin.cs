@@ -14,6 +14,8 @@ namespace OpenMineServer.Network.Protocol.Game
 
         private int _protocolVersion;
         private string _username;
+        private bool _auth;
+        private string _authToken;
 
         public PacketLogin()
         {
@@ -29,6 +31,16 @@ namespace OpenMineServer.Network.Protocol.Game
             return _username;
         }
 
+        public string getAuthToken()
+        {
+            return _authToken;
+        }
+
+        public bool usingAuth()
+        {
+            return _auth;
+        }
+
 
         public void ToBuffer(Serialization serialization)
         {
@@ -38,6 +50,15 @@ namespace OpenMineServer.Network.Protocol.Game
         {
             _protocolVersion = (int)serialization.Read(DataType.Int);
             _username = (string)serialization.Read(DataType.String);
+            _auth = (bool)serialization.Read(DataType.Bool);
+            if (_auth)
+            {
+                _authToken = (string)serialization.Read(DataType.String);
+            }
+            else
+            {
+                _authToken = "";
+            }
         }
 
         public bool Sendable()

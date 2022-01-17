@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b3e54acb-1868-4ff1-aa08-11a883ffcbae": {
+      "ProjectGuid": "b3e54acb-1868-4ff1-aa08-11a883ffcbae",
+      "DisplayName": "OpenMineServer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

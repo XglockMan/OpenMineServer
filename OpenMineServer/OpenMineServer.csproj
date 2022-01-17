@@ -8,10 +8,11 @@
 
     <ItemGroup>
       <PackageReference Include="DotNettyAll" Version="2.6.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Game" />
+      <Folder Include="Server" />
     </ItemGroup>
 
 </Project>

@@ -8,9 +8,10 @@ namespace OpenMineServer.Network.Protocol
 
         byte GetID();
 
-        void ToBuffer(IByteBuffer outputBuffer);
+        void ToBuffer(Serialization serialization);
 
-        void Parse(IByteBuffer buffer);
+        void Parse(Serialization serialization);
 
+        bool Sendable();
     }
 }

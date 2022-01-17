@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GKr7zFU2OGVIduCvP+/asSmwZb40GiKXqCsO03oemiJrGpy5+QkYmzYhfaG423CYbAtSeIZM0SkPgPrWHeOPvw==",
+  "dgSpecHash": "0p53bpgL8jweHnbAffsvz3cxkPHcfjUZ7nKI+xqzzVTi62iU1hFHg2cgz3IS7E5UCf4gTvkpl0bkeic7BcPUFw==",
   "success": true,
   "projectFilePath": "D:\\Dev\\SRC\\OpenMine\\Server\\OpenMineServer\\OpenMineServer\\OpenMineServer.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\XglockMan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\XglockMan\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
     "C:\\Users\\XglockMan\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\XglockMan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\XglockMan\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
     "C:\\Users\\XglockMan\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
     "C:\\Users\\XglockMan\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
