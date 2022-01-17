@@ -2,15 +2,15 @@
 
 namespace OpenMineServer
 {
-    class Program
+    class OMServerBootstrap
     {
-        public Program()
+        public OMServerBootstrap()
         {
             
         }
         static void Main(string[] args)
         {
-            new Program();
+            new OMServerBootstrap();
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace OpenMineServer.Network.Protocol
 {
-    public class PacketHeader
+    public enum DataType
     {
         
     }
