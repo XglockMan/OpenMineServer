@@ -2,6 +2,7 @@ using DotNetty.Buffers;
 
 namespace OpenMineServer.Network.Protocol.Game
 {
+    [ProtocolPacket(1)]
     public class PacketChat : IPacket
     {
         public PacketType GetPacketType()

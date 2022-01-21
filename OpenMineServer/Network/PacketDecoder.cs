@@ -1,24 +1,33 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using OpenMineServer.Network.Protocol;
-using OpenMineServer.Network.Protocol.Game;
 
 namespace OpenMineServer.Network
 {
     public class PacketDecoder : ByteToMessageDecoder
     {
-        private static Dictionary<byte, Type> _packets;
+        private static IDictionary<byte, Type> _packets;
 
         static PacketDecoder()
         {
-            _packets = new Dictionary<byte, Type>
+            foreach (Type classType in Assembly.GetExecutingAssembly().GetTypes())
             {
-                { 1, typeof(PacketChat) },
-                { 2, typeof(PacketLogin) }
-            };
+                if (classType.Namespace != null && classType.Namespace.Equals("OpenMineServer.Network.Protocol.Game"))
+                {
+                    foreach (object attribute in classType.GetCustomAttributes())
+                    {
+                        if (attribute is ProtocolPacket)
+                        {
+                            ProtocolPacket packet = (ProtocolPacket)attribute;
+                            _packets.Add(packet.Packetid, classType);
+                        }
+                    }
+                }
+            }
         }
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer encodedPacket, List<object> decodedPacket)
@@ -36,5 +45,5 @@ namespace OpenMineServer.Network
                 throw new Exception();
             }
         }
-    }
+    } 
 }
